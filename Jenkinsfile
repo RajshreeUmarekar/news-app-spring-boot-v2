@@ -13,13 +13,13 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
-        // stage('Build Docker Image') {
-        //     steps {
-        //         script {
-        //             bat 'docker build -t rajshreeu/news-app-jenkins-docker-backend .'
-        //         }
-        //     }
-        // }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    bat 'docker build -t rajshreeu/news-app-jenkins-docker-backend .'
+                }
+            }
+        }
         stage('Push Image to Hub'){
             steps {
                 script {
