@@ -16,7 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    bat 'docker build -t rajshreeu/news-app-jenkins-docker-backend .'
+                    bat 'docker build -f Dockerfile -t rajshreeu/news-app-jenkins-docker-backend .'
                 }
             }
         }
